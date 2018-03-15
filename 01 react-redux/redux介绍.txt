@@ -1,0 +1,60 @@
+一、react-redux介绍
+Redux 是 JavaScript 状态容器，提供可预测化的状态管理。
+
+react-redux  是react的一个状态管理插件
+
+
+解决问题:非父子组件传值的问题
+
+
+定义了一个存储（全局） 包括：
+1.状态 （全局状态）  state
+2.改变状态的方法   action
+
+
+
+二、安装redux 和 react-redux
+1.安装redux命令
+npm install redux --save
+yarn add redux
+
+2.安装react-redux
+npm install react-redux --save
+yarn add react-redux
+
+三、使用redux 和 react-redux
+
+1.什么是存储
+Store 就是把它们(action和reducer)联系到一起的对象。
+
+2.定义存储     在index.js中
+//1.导入reducers
+import reducers from "./store/reducers"
+
+//2.导入创建存储的方法
+import {createStore} from "redux"
+
+//3.创建存储对象
+let store = createStore(reducers)
+//4.使用存储对象
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>
+    , document.getElementById('root'));
+registerServiceWorker();
+
+
+
+Store功能
+维持应用的 state；
+提供 getState() 方法获取 state；
+提供 dispatch(action) 方法更新 state；
+通过 subscribe(listener) 注册监听器;
+通过 subscribe(listener) 返回的函数注销监听器
+
+
+3.调用存储对象里面的方法(任何组件中都可以)
+获取状态和改变状态
+
+

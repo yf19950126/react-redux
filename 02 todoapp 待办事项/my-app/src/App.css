@@ -1,0 +1,30 @@
+.App {
+  width: 1200px;
+  margin: 0 auto;
+}
+ul,li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.todo-list{
+  margin-bottom: 10px;
+}
+.todo-list li span{
+  float: right;
+  color: #ccc;
+  font-size: 13px;
+}
+.filter-buttons{
+  margin-top: 10px;
+}
+.filter-buttons button{
+  margin-right: 10px;
+}
+.filter-buttons .active{
+  color: #ea6f5a;
+}
+.todo-list li.active{
+  color: #ea6f5a;
+  text-decoration: line-through;
+}
